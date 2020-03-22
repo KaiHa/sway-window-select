@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               sway-window-select
+version:            0.2.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Kai Harries
+maintainer:         kai.harries@posteo.de
+-- copyright:
+category:           System
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall -threaded
+
+executable sway-window-select
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base >=4.12
+                    , aeson
+                    , bytestring
+                    , containers
+                    , extra
+                    , fmt
+                    , optparse-applicative
+                    , pretty-simple
+                    , split
+                    , typed-process
+    hs-source-dirs:   ./src
+    default-language: Haskell2010
